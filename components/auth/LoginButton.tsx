@@ -12,7 +12,7 @@ export const LoginButton = ({ children, mode = "redirect", asChild = false }: Lo
   const router = useRouter();
 
   const onClick = () => {
-    router.push("/api/auth/login");
+    router.push("/auth/login");
   };
 
   if (mode === "modal") {

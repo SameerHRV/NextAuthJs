@@ -32,8 +32,8 @@ const LoginForm = () => {
 
     startTransition(() => {
       login(values).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
+        setError(data?.error);
+        setSuccess(data?.success ?? "");
       });
     });
   };
@@ -42,7 +42,7 @@ const LoginForm = () => {
     <CardWrapper
       headerLabel="Welcome back"
       backButtonLabel="Dont't have a account?"
-      backButtonHref="/api/auth/register"
+      backButtonHref="/auth/register"
       showSocialButtons
     >
       <Form {...form}>
